@@ -50,6 +50,8 @@ DB_PASSWORD=
 ```
 cd {项目名称}
 
+composer require -W psr/container ^1
+
 composer require rockys/ex-admin-webman
 ```
 配置config/autoload.php
