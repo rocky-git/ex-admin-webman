@@ -35,7 +35,34 @@
 composer create-project webman/webman 项目名称
 ```
 
-安装完 webman 之后需要修改.env 文件，设置数据库连接设置正确
+安装完 webman 之后需要配置config/database.php
+```php
+
+return [
+    'default' => env('DB_CONNECTION', 'mysql'),
+    'connections' => [
+        'mysql' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => [
+                \PDO::ATTR_TIMEOUT => 3
+            ],
+        ],
+    ]
+];
+```
+新建.env 文件，设置数据库连接设置正确
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -72,6 +99,15 @@ return [
 ```
 php webman admin:install
 ```
+注册路由，配置config/route.php：
+```php
+<?php
+
+use Webman\Route;
+
+plugin()->webman->route();
+```
+
 启动服务：
 ```
 php start.php start
