@@ -2,6 +2,7 @@
 
 namespace ExAdmin\webman\command;
 
+use ExAdmin\webman\ServiceProvider;
 use support\Db;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\ArrayInput;
@@ -36,6 +37,7 @@ class AdminInstall extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        ServiceProvider::init();
         $filesystem = new Filesystem();
         $filesystem->mirror(base_path() .'/vendor/rockys/ex-admin-ui/resources',public_path('exadmin'),null,['override'=>$input->getOption('force')]);
         $path = plugin()->download('webman',$input->getOption('versions'));

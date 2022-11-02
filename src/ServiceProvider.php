@@ -13,11 +13,14 @@ class ServiceProvider implements Bootstrap
      */
     public static function start($worker){
         self::updateVersion();
+        self::init();
+        \ExAdmin\ui\support\Container::getInstance()->plugin->register();
+    }
+    public static function init(){
         $config = admin_config('admin');
         $config['plugin']['namespace'] = 'addons';
         $config['plugin']['dir'] = base_path('addons');
         admin_config($config,'admin');
-        \ExAdmin\ui\support\Container::getInstance()->plugin->register();
     }
     protected static function updateVersion(){
         $file = public_path('exadmin').DIRECTORY_SEPARATOR.'version';

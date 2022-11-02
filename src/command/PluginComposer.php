@@ -2,6 +2,7 @@
 
 namespace ExAdmin\webman\command;
 
+use ExAdmin\webman\ServiceProvider;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -30,7 +31,7 @@ class PluginComposer extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
+        ServiceProvider::init();
         $name = $input->getArgument('name');
         $plugs = plugin()->getPlug($name);
 
@@ -46,14 +47,14 @@ class PluginComposer extends Command
             }
         }
         if(count($package) == 0){
-            $output->write('Nothing to install, update or remove');
+            $output->writeln('Nothing to install, update or remove');
             return 0;
         }
         $path  = base_path();
         $cmd = array_merge(['composer','require'],$package);
         $process = new Process($cmd,$path);
         $process->run(function ($type, $buffer)use($output) {
-            $output->write($buffer);
+            $output->writeln($buffer);
         });
         return self::SUCCESS;
     }

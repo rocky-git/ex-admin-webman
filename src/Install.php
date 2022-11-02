@@ -37,6 +37,7 @@ class Install
      */
     public static function installByRelation()
     {
+        print_r('安卓');
         foreach (static::$pathRelation as $source => $dest) {
             if ($pos = strrpos($dest, '/')) {
                 $parent_dir = base_path() . '/' . substr($dest, 0, $pos);

@@ -35,7 +35,16 @@
 composer create-project workerman/webman 项目名称
 ```
 
-安装完 webman 之后需要配置config/database.php
+安装 ex-admin
+
+```
+cd {项目名称}
+
+composer require -W psr/container ^1
+
+composer require rockys/ex-admin-webman
+```
+配置config/database.php
 ```php
 
 return [
@@ -71,17 +80,6 @@ DB_DATABASE=webman
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-
-安装 ex-admin
-
-```
-cd {项目名称}
-
-composer require -W psr/container ^1
-
-composer require rockys/ex-admin-webman
-```
-
 
 然后运行下面的命令完成安装：
 ```
