@@ -30,9 +30,9 @@
 - 支持自定义图表
 
 ### 安装
-首先需要安装 webman 框架，如已安装可以跳过此步骤。如果您是第一次使用 webman，请务必先阅读文档 <a href="https://learnku.com/docs/webman/8.5/installation/10359" target="_blank">安装《webman 8 中文文档》</a> ！
+首先需要安装 webman 框架，如已安装可以跳过此步骤。如果您是第一次使用 webman，请务必先阅读文档 <a href="https://www.workerman.net/doc/webman/install.html" target="_blank">安装《webman 中文文档》</a> ！
 ```
-composer create-project webman/webman 项目名称
+composer create-project workerman/webman 项目名称
 ```
 
 安装完 webman 之后需要配置config/database.php
@@ -62,7 +62,7 @@ return [
     ]
 ];
 ```
-新建.env 文件，设置数据库连接设置正确
+修改.env 文件，设置数据库连接设置正确
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -118,6 +118,7 @@ Ex-Admin遵循Apache2开源协议发布，并提供免费使用
 ### 捐赠
 
 <div>
-<img src="https://www.ex-admin.com/storage/files/fa5b3c66950b0bc92b96552dd8095ac7.jpeg" height="200">
-<img src="https://www.ex-admin.com/storage/files/82ace9b2aebc95aaa59610bfb5a620bf.jpeg" height="200">
+<img src="https://www.ex-admin.com/storage/files/fa5b3c66950b0bc92b96552dd8095ac7.jpeg" height="300">
+
+<img src="https://www.ex-admin.com/storage/files/82ace9b2aebc95aaa59610bfb5a620bf.jpeg" height="300">
 </div>
