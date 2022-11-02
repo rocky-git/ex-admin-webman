@@ -1,6 +1,7 @@
 <?php
 namespace ExAdmin\webman;
 
+use Symfony\Component\Filesystem\Filesystem;
 use Webman\Bootstrap;
 use Workerman\Worker;
 
@@ -32,7 +33,8 @@ class ServiceProvider implements Bootstrap
             $update = true;
         }
         if($update){
-            app(\Illuminate\Contracts\Console\Kernel::class)->call('vendor:publish',['--force'=>true,'--tag'=>['ex-admin-ui']]);
+            $filesystem = new Filesystem();
+            $filesystem->mirror(dirname(__DIR__,2) . '/ex-admin-ui/resources',public_path('exadmin'),null,['override'=>true]);
             file_put_contents($file,ex_admin_version());
         }
     }

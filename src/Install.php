@@ -20,6 +20,7 @@ class Install
     public static function install()
     {
         static::installByRelation();
+        copy(__DIR__.'/.env.example',base_path('.env'));
     }
 
     /**
