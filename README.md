@@ -81,32 +81,13 @@ composer require -W psr/container ^1
 
 composer require rockys/ex-admin-webman
 ```
-配置config/autoload.php
 
-```
-return [
-    'files' => [
-        base_path() . '/app/functions.php',
-        base_path() . '/support/Request.php',
-        base_path() . '/support/Response.php',
-        //添加此行
-        base_path() .'/vendor/rockys/ex-admin-webman/src/start.php',
-    ]
-];
-```
 
 然后运行下面的命令完成安装：
 ```
 php webman admin:install
 ```
-注册路由，配置config/route.php：
-```php
-<?php
 
-use Webman\Route;
-
-plugin()->webman->route();
-```
 
 启动服务：
 ```
