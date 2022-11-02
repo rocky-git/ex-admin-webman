@@ -1,6 +1,8 @@
 <?php
+if(plugin()->webman){
+    plugin()->webman->route(); 
+}
 
-plugin()->webman->route();
 
 
 

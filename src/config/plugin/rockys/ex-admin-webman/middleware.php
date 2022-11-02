@@ -14,7 +14,7 @@
 
 return [
     '' => [
-        \addons\webman\middleware\RequestMiddleware::class
+        \ExAdmin\webman\middleware\RequestMiddleware::class
     ]
     
 ];
