@@ -111,5 +111,13 @@ php start.php start
 
 
 ### License
+
 ------------
 Ex-Admin遵循Apache2开源协议发布，并提供免费使用
+
+### 捐赠
+
+<div>
+<img src="https://www.ex-admin.com/storage/files/fa5b3c66950b0bc92b96552dd8095ac7.jpeg" height="200">
+<img src="https://www.ex-admin.com/storage/files/82ace9b2aebc95aaa59610bfb5a620bf.jpeg" height="200">
+</div>
