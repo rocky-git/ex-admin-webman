@@ -1,6 +1,6 @@
 <?php
 
-namespace app\command;
+namespace ExAdmin\webman\command;
 
 use support\Db;
 use Symfony\Component\Console\Command\Command;

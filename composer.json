@@ -20,6 +20,7 @@
     "require": {
         "php": ">=7.3.0",
         "webman/console": "^1",
+        "webman/redis-queue": "^1",
         "vlucas\/phpdotenv": "^5.5",
         "psr/container": "1.1.2",
         "illuminate/database": "^8",
@@ -36,9 +37,6 @@
     "autoload": {
         "psr-4": {
             "ExAdmin\\webman\\": "src"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
+        }
     }
 }
