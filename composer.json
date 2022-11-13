@@ -22,7 +22,7 @@
         "webman/console": "^1",
         "webman/redis-queue": "^1",
         "vlucas\/phpdotenv": "^5.5",
-        "psr/container": "1.1.2",
+        "psr/container": "^1",
         "illuminate/database": "^8",
         "illuminate/events": "^8",
         "illuminate/validation": "^8",
