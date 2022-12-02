@@ -1,6 +1,8 @@
 <?php
 namespace ExAdmin\webman;
 
+use ExAdmin\webman\exception\Error;
+use support\Container;
 use Symfony\Component\Filesystem\Filesystem;
 use Webman\Bootstrap;
 use Workerman\Worker;
@@ -13,6 +15,7 @@ class ServiceProvider implements Bootstrap
      * @return void
      */
     public static function start($worker){
+        set_error_handler([Container::make(Error::class), 'appError']);
         self::updateVersion();
         self::init();
         \ExAdmin\ui\support\Container::getInstance()->plugin->register();
