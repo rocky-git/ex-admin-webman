@@ -32,7 +32,7 @@
         "overtrue/laravel-filesystem-qiniu": "^1 || ^2",
         "iidestiny/laravel-filesystem-oss": "^2 || ^3",
         "symfony/process": ">=4",
-        "rockys/ex-admin-ui": ">=1.1.4"
+        "rockys/ex-admin-ui": "^1"
     },
     "autoload": {
         "psr-4": {
